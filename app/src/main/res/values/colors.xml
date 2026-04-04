@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#1B8A5A</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="income_green">#1B8A5A</color>
+    <color name="expense_red">#D9534F</color>
+    <color name="screen_bg">#F8F9FB</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#222222</color>
+    <color name="text_secondary">#757575</color>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etFoodBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etTravelBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Travel Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etShoppingBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shopping Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etBillsBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bills Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etHealthBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Health Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etEntertainmentBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entertainment Budget"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etOtherBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Other Budget"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+</ScrollView>

@@ -3,39 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@color/screen_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginTop="40dp"
+        >
 
+        <!-- Header -->
         <TextView
-            android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PocketPilot"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/white"
+            android:letterSpacing="0.05" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Track your money smartly"
-            android:textSize="14sp"
-            android:textColor="#666666"
-            android:layout_marginTop="4dp"
+            android:text="Track your money smartly her"
+            android:textSize="13sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="16dp" />
 
-        <androidx.cardview.widget.CardView
+
+
+        <!-- Balance Card -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:background="?android:attr/listDivider" />
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             app:cardCornerRadius="18dp"
-            app:cardElevation="6dp"
-            app:cardBackgroundColor="#1E88E5">
+            app:cardElevation="50dp"
+            app:cardBackgroundColor="@color/balance_card_bg_trans"
+            app:strokeColor="@color/text_primary_dark"
+            app:strokeWidth="0.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,274 +61,362 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Balance"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/white" />
+                    android:text="TOTAL BALANCE"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_muted"
+                    android:letterSpacing="0.08" />
 
                 <TextView
                     android:id="@+id/tvBalance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹0"
-                    android:textSize="30sp"
+                    android:textSize="32sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white"
-                    android:layout_marginTop="8dp" />
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="6dp" />
+                <TextView
+                    android:id="@+id/tvMonthlyChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="↑ +₹0 this month"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/income_green" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Income / Expense Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="12dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+            <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#E8F5E9">
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="50dp"
+                app:strokeColor="#4F8C73"
+                app:strokeWidth="0.5dp"
+                app:cardBackgroundColor="@color/income_bg">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="14dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Income"
-                        android:textSize="14sp"
-                        android:textColor="#2E7D32" />
+                        android:text="INCOME"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_primary"
+                        android:letterSpacing="0.06" />
 
                     <TextView
                         android:id="@+id/tvIncome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="₹0"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#1B5E20"
-                        android:layout_marginTop="6dp" />
+                        android:textColor="@color/income_green"
+                        android:layout_marginTop="4dp" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#FFEBEE">
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#955454"
+                app:strokeWidth="0.5dp"
+                app:cardBackgroundColor="@color/expense_bg">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="14dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expense"
-                        android:textSize="14sp"
-                        android:textColor="#C62828" />
+                        android:text="EXPENSE"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_primary"
+                        android:letterSpacing="0.06" />
 
                     <TextView
                         android:id="@+id/tvExpense"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="₹0"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#B71C1C"
-                        android:layout_marginTop="6dp" />
+                        android:textColor="@color/expense_red"
+                        android:layout_marginTop="4dp" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-
-        <androidx.cardview.widget.CardView
+        <!-- Weekly Trend -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="@android:color/white"
-            android:layout_marginBottom="12dp">
+            app:cardBackgroundColor="@android:color/transparent"
+            app:strokeColor="@android:color/transparent"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="14dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Top Spending Category"
+                    android:text="WEEKLY TREND"
                     android:textSize="14sp"
-                    android:textColor="#444444" />
+                    android:textColor="@color/text_primary"
+                    android:letterSpacing="0.06" />
 
-                <TextView
-                    android:id="@+id/tvTopCategoryHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No expense data yet"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="6dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <View
+                        android:id="@+id/barMon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barTue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barWed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barThu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barFri"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barSat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bar_bg" />
+
+                    <View
+                        android:id="@+id/barSun"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bar_bg" />
+                </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Smart Insight (left accent border) -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#FFF8E1"
-            android:layout_marginBottom="12dp">
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/insight_bg"
+            app:strokeColor="@color/primary_dark"
+            app:strokeWidth="0.5dp"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Smart Insight"
-                    android:textSize="14sp"
-                    android:textColor="#EF6C00" />
+                <!-- Left accent bar -->
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/teal_700" />
 
-                <TextView
-                    android:id="@+id/tvSmartInsight"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Insight will appear here"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="8dp" />
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMART INSIGHT"
+                        android:textSize="10sp"
+                        android:textColor="@color/teal_700"
+                        android:letterSpacing="0.06" />
+
+                    <TextView
+                        android:id="@+id/tvSmartInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Insight will appear here"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingMultiplier="1.4" />
+                </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <!-- Savings Goal -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#E8F5E9"
-            android:layout_marginBottom="12dp">
+            app:cardElevation="0dp"
+            app:strokeColor="@color/purple_500"
+            app:strokeWidth="0.5dp"
+            app:cardBackgroundColor="@color/goal_bg"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="14dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Savings Goal Progress"
-                    android:textSize="14sp"
-                    android:textColor="#2E7D32" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SAVINGS GOAL"
+                        android:textSize="10sp"
+                        android:textColor="@color/purple_500"
+                        android:letterSpacing="0.06" />
+
+                    <TextView
+                        android:id="@+id/tvGoalProgressHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple_500" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvGoalTargetHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Goal: ₹0"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="8dp" />
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp" />
 
                 <ProgressBar
                     android:id="@+id/progressGoalHome"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="4dp"
                     android:max="100"
                     android:progress="0"
-                    android:layout_marginTop="12dp" />
-
-                <TextView
-                    android:id="@+id/tvGoalProgressHome"
-                    android:layout_width="wrap_content"
+                    android:progressTint="@color/purple_500"
+                    android:progressBackgroundTint="@color/border_color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0% completed"
-                    android:textSize="14sp"
-                    android:textColor="#444444"
-                    android:layout_marginTop="8dp" />
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginTop="6dp">
+
+                    <Button
+                        android:id="@+id/btnSetGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Set Goal"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_primary"
+                        android:backgroundTint="@color/purple_500"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+                </LinearLayout>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <Button
-            android:id="@+id/btnSetBudget"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Set Budget"
-            android:layout_marginBottom="12dp" />
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#FFEBEE"
-            android:layout_marginBottom="16dp">
+        </com.google.android.material.card.MaterialCardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Budget Alert"
-                    android:textSize="14sp"
-                    android:textColor="#C62828" />
-
-                <TextView
-                    android:id="@+id/tvBudgetSummaryHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No budget set yet"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
+        <!-- Recent Transactions Header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recent Transactions"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="10dp" />
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/tvEmptyRecent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No transactions yet"
-            android:textSize="14sp"
-            android:textColor="#777777"
+            android:text="No transactions added yet"
+            android:textSize="13sp"
+            android:textColor="@color/text_muted"
             android:visibility="gone"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="40dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerRecent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false" />
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="40dp"/>
 
     </LinearLayout>
 </ScrollView>

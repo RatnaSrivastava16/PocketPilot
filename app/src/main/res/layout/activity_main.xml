@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -21,13 +21,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_gravity="bottom"
-        android:background="@android:color/white"
+        app:backgroundTint="@color/primary_accent"
         app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/bottom_nav_menu"
+        app:itemRippleColor="@android:color/white"
+        app:itemActiveIndicatorStyle="@animator/nav_default_pop_enter_anim"
         >
-
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -35,12 +37,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
-        android:layout_margin="8dp"
-
         android:contentDescription="Add Transaction"
         android:src="@drawable/outline_add_24"
-        app:backgroundTint="@color/teal_700"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="#E6FFFFFF"
+        app:tint="@color/nav_inactive"
         app:layout_anchor="@id/bottomNavigationView"
-        app:layout_anchorGravity="top|end"
-        app:tint="@android:color/white" />
+        app:layout_anchorGravity="top|end" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

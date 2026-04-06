@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomNavigationView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.homeFragment) {
+            if (destination.id == R.id.transactionsFragment) {
                 binding.fabAddTransaction.show()
             } else {
                 binding.fabAddTransaction.hide()
@@ -34,6 +34,5 @@ class MainActivity : AppCompatActivity() {
         binding.fabAddTransaction.setOnClickListener {
             navController.navigate(R.id.addEditTransactionFragment)
         }
-
     }
 }

@@ -1,17 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#BB86FC</color>
-    <color name="purple_500">#6200EE</color>
+
     <color name="purple_700">#3700B3</color>
-    <color name="teal_200">#03DAC5</color>
-    <color name="teal_700">#1B8A5A</color>
+
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="income_green">#1B8A5A</color>
-    <color name="expense_red">#D9534F</color>
-    <color name="screen_bg">#F8F9FB</color>
-    <color name="card_bg">#FFFFFF</color>
-    <color name="text_primary">#222222</color>
-    <color name="text_secondary">#757575</color>
+    <color name="input_border_bg">#2B3F73</color>
+        <color name="screen_bg">#0D1117</color>
+        <color name="card_bg">#111827</color>
+        <color name="card_bg_dark">#0F1829</color>
+        <color name="balance_card_bg">#1A2340</color>
+        <color name="border_color">#1E2330</color>
+        <color name="balance_card_bg_trans">#CC1A2340</color>
+
+        <color name="primary_accent">#BF1A2340</color>
+        <color name="primary_dark">#3B5BDB</color>
+        <color name="primary_accent_bar">#BF3E518E</color>
+
+
+    <color name="income_green">#4ADE80</color>
+        <color name="income_bg">#0D2018</color>
+        <color name="income_border">#1A3A2A</color>
+
+        <color name="expense_red">#F87171</color>
+        <color name="expense_bg">#200D0D</color>
+        <color name="expense_border">#3A1A1A</color>
+
+        <color name="text_primary">#E8EDF5</color>
+        <color name="text_primary_dark">#BAC2CE</color>
+        <color name="text_secondary">#8A9AB0</color>
+        <color name="text_muted">#4A5568</color>
+        <color name="text_accent">#60A5FA</color>
+
+        <color name="insight_border">#7B6FFF</color>
+        <color name="insight_bg">#111827</color>
+        <color name="goal_bg">#0F1A2A</color>
+        <color name="budget_alert_bg">#1A0D0D</color>
+
+        <color name="teal_200">#7B6FFF</color>
+        <color name="teal_700">#3B5BDB</color>
+        <color name="purple_200">#9B8FFF</color>
+        <color name="purple_500">#7B6FFF</color>
+        <color name="warning_amber">#F59E0B</color>
+        <!-- Bottom nav -->
+        <color name="nav_active">#FAF2F2</color>
+        <color name="nav_inactive">#2A3A5A</color>
 </resources>

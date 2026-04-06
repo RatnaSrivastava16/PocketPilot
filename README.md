@@ -32,11 +32,11 @@ PocketPilot is a modern Android application designed to help users manage their 
 
 | Home | Analytics | Transactions |
 |------|----------|-------------|
-| ![Home](assets/home.png) | ![Analytics](assets/analytics.png) | ![Transactions](assets/transactions.png) |
+| ![Home](assets/Home.jpeg) | ![Analytics](assets/Analytics.jpeg) | ![Transactions](assets/Transaction.jpeg) |
 
 | Edit Transaction | Budget Dialog |
 |-----------------|--------------|
-| ![Edit](assets/edit.png) | ![Budget](assets/budget.png) |
+| ![Edit](assets/Edit.jpeg) | ![Budget](assets/Budget.jpeg) |
 
 ---
 

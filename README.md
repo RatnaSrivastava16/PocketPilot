@@ -1,9 +1,9 @@
 # 🚀 PocketPilot – Smart Personal Finance Tracker
 
+> 📌 This project was developed as part of the screening assessment for the **Mobile App Developer Intern** position at **Zorvyn**.
+
 > Track. Analyze. Optimize. 💰  
 PocketPilot is a modern Android application designed to help users manage their finances efficiently with real-time insights, budget tracking, and beautiful analytics.
-
-> 📌 This project is developed as part of the screening assessment for the **Mobile App Developer Intern** position at **Zorvyn**.
 
 ---
 
@@ -120,16 +120,47 @@ UI → ViewModel → Repository → Room Database
 
 ---
 
-## 🚀 Installation
+## 📦 Download APK
+
+You can directly download and install the app on your Android device:
+
+👉 Navigate to the **APK folder** in this repository and download the `.apk` file.
+
+### 📲 How to Install APK
+
+1. Download the APK file from the repository  
+2. Transfer it to your Android device (if downloaded on PC)  
+3. Open the APK file on your device  
+4. Allow **“Install from unknown sources”** if prompted  
+5. Tap **Install**  
+6. Open the app and start using 🎉  
+
+---
+
+## 🚀 Installation (For Developers)
+
+Follow these steps to run **PocketPilot** locally:
 
 1. Clone the repository:
 
 ```bash
 git clone https://github.com/RatnaSrivastava16/PocketPilot.git
 ```
-2. Open in Android Studio
+2. Move into the project folder
 
-3. Build & Run 🚀
+```bash
+cd PocketPilot
+```
+
+3. Open in Android Studio
+   - Launch Android Studio
+   - Click Open
+   - Select the project folder
+   - Wait for Gradle sync   
+
+4. Run the app
+   - Connect device / start emulator
+   - Build & Run
 
 ---
 

@@ -28,8 +28,6 @@ PocketPilot is a modern Android application designed to help users manage their 
 
 ## 🖼️ Screenshots
 
-> *(Add your images in repo → assets/screenshots and update paths below)*
-
 | Home | Analytics | Transactions |
 |------|----------|-------------|
 | ![Home](assets/Home.jpeg) | ![Analytics](assets/Analytics.jpeg) | ![Transactions](assets/Transaction.jpeg) |
@@ -70,7 +68,8 @@ PocketPilot is a modern Android application designed to help users manage their 
 ## 🏗️ Architecture
 
 The app follows **MVVM (Model-View-ViewModel)** architecture for clean separation of concerns.
-#####  Project Structure
+
+###  Project Structure
 
 ```text
 com.example.pocketpilot

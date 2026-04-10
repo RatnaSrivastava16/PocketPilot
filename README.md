@@ -1,7 +1,5 @@
 # 🚀 PocketPilot – Smart Personal Finance Tracker
 
-> 📌 This project was developed as part of the screening assessment for the **Mobile App Developer Intern** position at **Zorvyn**.
-
 > Track. Analyze. Optimize. 💰  
 PocketPilot is a modern Android application designed to help users manage their finances efficiently with real-time insights, budget tracking, and beautiful analytics.
 
